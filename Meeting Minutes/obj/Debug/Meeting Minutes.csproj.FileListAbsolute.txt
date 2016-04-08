@@ -1,0 +1,6 @@
+c:\users\wecancodeit\documents\visual studio 2015\Projects\Meeting Minutes\Meeting Minutes\bin\Debug\Meeting Minutes.exe.config
+c:\users\wecancodeit\documents\visual studio 2015\Projects\Meeting Minutes\Meeting Minutes\bin\Debug\Meeting Minutes.exe
+c:\users\wecancodeit\documents\visual studio 2015\Projects\Meeting Minutes\Meeting Minutes\bin\Debug\Meeting Minutes.pdb
+c:\users\wecancodeit\documents\visual studio 2015\Projects\Meeting Minutes\Meeting Minutes\obj\Debug\Meeting Minutes.csprojResolveAssemblyReference.cache
+c:\users\wecancodeit\documents\visual studio 2015\Projects\Meeting Minutes\Meeting Minutes\obj\Debug\Meeting Minutes.exe
+c:\users\wecancodeit\documents\visual studio 2015\Projects\Meeting Minutes\Meeting Minutes\obj\Debug\Meeting Minutes.pdb
