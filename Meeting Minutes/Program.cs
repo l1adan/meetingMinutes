@@ -11,20 +11,10 @@ namespace Meeting_Minutes
     {
         
         static void Main(string[] args)
+
+        //CREATING A MEETING SWITCH CASE METHOD
         {
-
-          
-
-            //CREATING A MEETING SWITCH CASE METHOD
-            
-                executingMenu();
-            
-
-           
-
-
-
-
+            executingMenu();
         }
 
        
@@ -32,7 +22,7 @@ namespace Meeting_Minutes
 
         static void MeetingMinutesMenu()
         {
-            //MEETING TITLE
+            //Program Header and Menu
             Console.WriteLine();
             Console.WriteLine("-------------------(* MEETING MINUTES MANAGEMENT SOFTWARE *)--------------------");
             Console.WriteLine();
@@ -52,7 +42,7 @@ namespace Meeting_Minutes
             Console.WriteLine(exitItem);
         }
 
-
+        //Switch Case Variables
         static void executingMenu()
         {
             string fileName;
@@ -65,9 +55,6 @@ namespace Meeting_Minutes
             string extraNotes = "";
             string extraTopicNotesResponse = "";
             string userMeetingTopic = "";
-
-
-
 
             //CASE 2 VARIABLES
             string userTeamResponse;
@@ -89,12 +76,15 @@ namespace Meeting_Minutes
                     Console.WriteLine("                               CREATE MEETING");
                     Console.WriteLine("Please enter the team members name who'll be recording the minutes of your \nmeeting:");      //Minute Recorder
                     userMinuteRecorder = Console.ReadLine();
+                    Console.WriteLine();
 
                     Console.WriteLine("Please enter the name of the human you've appointed to lead your meeting:");            //Team Leader
                     userTeamLeader = Console.ReadLine();
+                    Console.WriteLine();
 
                     Console.WriteLine("Please enter the desired date of the meeting.(MMDDYY)"); //Meeting Date
                     userMeetingDate = Console.ReadLine();
+                    Console.WriteLine();
 
 
                     Console.WriteLine("What type of meeting will this be? \nSelect the number of your desired meeting type:");
@@ -139,7 +129,7 @@ namespace Meeting_Minutes
                     List<string> additionalNotes = new List<string>();
 
 
-
+                    //EXTRA TOPIC LOOP
                     while (extraTopicNotesResponse == "YES")
                     {
                         Console.WriteLine("Enter the topic of your meeting:");
@@ -152,7 +142,7 @@ namespace Meeting_Minutes
                         extraTopicNotesResponse = Console.ReadLine().ToUpper();
 
                     }
-
+                    //STREAM WRITER
                     fileName = "Minutes" + userMeetingDate + ".txt";
                     StreamWriter writer = new StreamWriter(fileName);
 
@@ -202,7 +192,7 @@ namespace Meeting_Minutes
                      fireTeam = 2;
                      psychicTeam = 3;
 
-                   
+                //LIST OF TEAMS   
                 List<string> pokeTeams = new List<string>();
                     {
                         pokeTeams.Add("Water Team");
@@ -211,7 +201,8 @@ namespace Meeting_Minutes
                     }
 
 
-                Dictionary<string, string> team = new Dictionary<string, string>();
+                    //TEAM MEMBERS
+                    Dictionary<string, string> team = new Dictionary<string, string>();
 
                     team.Add("Squirtle", "Water Team");
                     team.Add("Lapras", "Water Team");
@@ -236,7 +227,7 @@ namespace Meeting_Minutes
 
                     userTeamResponse = (Console.ReadLine());
 
-                    if (userTeamResponse == "1")
+                    if (userTeamResponse == "1") // VEIW WATER TEAM
                     {
                         foreach (KeyValuePair<string, string> pokemon in team)
                         {
@@ -248,7 +239,7 @@ namespace Meeting_Minutes
 
                     }
 
-                    else if (userTeamResponse == "2")
+                    else if (userTeamResponse == "2") //VIEW FIRE TEAM
                     {
                         foreach (KeyValuePair<string, string> pokemon in team)
                         {
@@ -260,7 +251,7 @@ namespace Meeting_Minutes
 
                     }
 
-                    else if (userTeamResponse == "3")
+                    else if (userTeamResponse == "3") // PSYCHIC TEAM 
                     {
                         foreach (KeyValuePair<string, string> pokemon in team)
                         {
@@ -273,7 +264,7 @@ namespace Meeting_Minutes
                     }
 
                     
-                    //   VIEW ALL
+                    //   VIEW ALL TEAM MEMBERS
                     else if (userTeamResponse == "4")
                     {
                         foreach (KeyValuePair<string, string> pokemon in team)
@@ -292,8 +283,10 @@ namespace Meeting_Minutes
                     executingMenu();
                     break;
 
+
+                //EXITS PROGRAM
                 case "3":
-                    exitBih();
+                    exit();
                     break;
 
                   
@@ -301,25 +294,16 @@ namespace Meeting_Minutes
 
                 default:
                     Console.WriteLine();
-                    Console.WriteLine("                                INVALID RESPONSE!");
+                    Console.WriteLine("                                INVALID RESPONSE");
                     executingMenu();
                     break;
 
             }
 
-           
-                    
-            
-        }
+         }
 
-
-       
-        
-        
-
-        static void exitBih()
+     static void exit()
         {
-
             Console.WriteLine("                         \a \a \a ~ ~ ~ * GOOD BYE! * ~ ~ ~");
             Environment.Exit(0);
         }
