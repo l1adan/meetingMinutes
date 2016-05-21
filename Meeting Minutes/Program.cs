@@ -23,8 +23,9 @@ namespace Meeting_Minutes
         static void MeetingMinutesMenu()
         {
             //Program Header and Menu
-            Console.WriteLine();
+            Console.WriteLine("                      -----------------------------------");
             Console.WriteLine("-------------------(* MEETING MINUTES MANAGEMENT SOFTWARE *)--------------------");
+            Console.WriteLine("                      -----------------------------------");
             Console.WriteLine();
 
 
@@ -74,6 +75,7 @@ namespace Meeting_Minutes
 
                 case "1":
                     Console.WriteLine("                               CREATE MEETING");
+                    Console.WriteLine();
                     Console.WriteLine("Please enter the team members name who'll be recording the minutes of your \nmeeting:");      //Minute Recorder
                     userMinuteRecorder = Console.ReadLine();
                     Console.WriteLine();
@@ -219,6 +221,7 @@ namespace Meeting_Minutes
                     Console.WriteLine();
 
                     Console.WriteLine("Select the number of the team you'd like to view:");
+                    Console.WriteLine();
 
                     Console.WriteLine("1. Water Team");
                     Console.WriteLine("2. Fire Team");
